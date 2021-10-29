@@ -36,7 +36,8 @@ class AuthFacade implements IAuthFacade {
                 'firstName': firstName,
                 'photoUrl': url,
               }));
-    } on PlatformException catch (_) {
+    } on PlatformException catch (e) {
+      print('error : $e');
       return left(const AuthFailure.serverError());
     }
   }

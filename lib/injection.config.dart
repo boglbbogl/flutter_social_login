@@ -27,7 +27,8 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
       () => firebaseInjectionModule.googleSignIn);
   gh.lazySingleton<_i5.IAuthFacade>(
       () => _i6.AuthFacade(get<_i4.GoogleSignIn>(), get<_i3.FirebaseAuth>()));
-  gh.factory<_i7.SignInFormBloc>(() => _i7.SignInFormBloc());
+  gh.factory<_i7.SignInFormBloc>(
+      () => _i7.SignInFormBloc(get<_i5.IAuthFacade>()));
   return get;
 }
 

@@ -3,9 +3,11 @@ part of 'sign_in_form_bloc.dart';
 @freezed
 class SignInFormState with _$SignInFormState {
   factory SignInFormState({
-    required bool isSubmitted,
+    required bool isSubmitting,
+    required Either<AuthFailure, Map<String, String?>>? authFailureOrSuccess,
   }) = _SignInFormState;
   factory SignInFormState.initial() => SignInFormState(
-        isSubmitted: false,
+        isSubmitting: false,
+        authFailureOrSuccess: null,
       );
 }

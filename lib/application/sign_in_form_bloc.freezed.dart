@@ -20,8 +20,8 @@ class _$SignInFormEventTearOff {
     return const _Started();
   }
 
-  _SignInWithGoogle signInWithGoogle() {
-    return const _SignInWithGoogle();
+  _SignInWithGooglePreesed signInWithGooglePressed() {
+    return const _SignInWithGooglePreesed();
   }
 }
 
@@ -33,26 +33,27 @@ mixin _$SignInFormEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() signInWithGoogle,
+    required TResult Function() signInWithGooglePressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? signInWithGoogle,
+    TResult Function()? signInWithGooglePressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_SignInWithGoogle value) signInWithGoogle,
+    required TResult Function(_SignInWithGooglePreesed value)
+        signInWithGooglePressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_SignInWithGoogle value)? signInWithGoogle,
+    TResult Function(_SignInWithGooglePreesed value)? signInWithGooglePressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -113,7 +114,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() signInWithGoogle,
+    required TResult Function() signInWithGooglePressed,
   }) {
     return started();
   }
@@ -122,7 +123,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? signInWithGoogle,
+    TResult Function()? signInWithGooglePressed,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -135,7 +136,8 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_SignInWithGoogle value) signInWithGoogle,
+    required TResult Function(_SignInWithGooglePreesed value)
+        signInWithGooglePressed,
   }) {
     return started(this);
   }
@@ -144,7 +146,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_SignInWithGoogle value)? signInWithGoogle,
+    TResult Function(_SignInWithGooglePreesed value)? signInWithGooglePressed,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -159,37 +161,38 @@ abstract class _Started implements SignInFormEvent {
 }
 
 /// @nodoc
-abstract class _$SignInWithGoogleCopyWith<$Res> {
-  factory _$SignInWithGoogleCopyWith(
-          _SignInWithGoogle value, $Res Function(_SignInWithGoogle) then) =
-      __$SignInWithGoogleCopyWithImpl<$Res>;
+abstract class _$SignInWithGooglePreesedCopyWith<$Res> {
+  factory _$SignInWithGooglePreesedCopyWith(_SignInWithGooglePreesed value,
+          $Res Function(_SignInWithGooglePreesed) then) =
+      __$SignInWithGooglePreesedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$SignInWithGoogleCopyWithImpl<$Res>
+class __$SignInWithGooglePreesedCopyWithImpl<$Res>
     extends _$SignInFormEventCopyWithImpl<$Res>
-    implements _$SignInWithGoogleCopyWith<$Res> {
-  __$SignInWithGoogleCopyWithImpl(
-      _SignInWithGoogle _value, $Res Function(_SignInWithGoogle) _then)
-      : super(_value, (v) => _then(v as _SignInWithGoogle));
+    implements _$SignInWithGooglePreesedCopyWith<$Res> {
+  __$SignInWithGooglePreesedCopyWithImpl(_SignInWithGooglePreesed _value,
+      $Res Function(_SignInWithGooglePreesed) _then)
+      : super(_value, (v) => _then(v as _SignInWithGooglePreesed));
 
   @override
-  _SignInWithGoogle get _value => super._value as _SignInWithGoogle;
+  _SignInWithGooglePreesed get _value =>
+      super._value as _SignInWithGooglePreesed;
 }
 
 /// @nodoc
 
-class _$_SignInWithGoogle implements _SignInWithGoogle {
-  const _$_SignInWithGoogle();
+class _$_SignInWithGooglePreesed implements _SignInWithGooglePreesed {
+  const _$_SignInWithGooglePreesed();
 
   @override
   String toString() {
-    return 'SignInFormEvent.signInWithGoogle()';
+    return 'SignInFormEvent.signInWithGooglePressed()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _SignInWithGoogle);
+    return identical(this, other) || (other is _SignInWithGooglePreesed);
   }
 
   @override
@@ -199,20 +202,20 @@ class _$_SignInWithGoogle implements _SignInWithGoogle {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() signInWithGoogle,
+    required TResult Function() signInWithGooglePressed,
   }) {
-    return signInWithGoogle();
+    return signInWithGooglePressed();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? signInWithGoogle,
+    TResult Function()? signInWithGooglePressed,
     required TResult orElse(),
   }) {
-    if (signInWithGoogle != null) {
-      return signInWithGoogle();
+    if (signInWithGooglePressed != null) {
+      return signInWithGooglePressed();
     }
     return orElse();
   }
@@ -221,36 +224,41 @@ class _$_SignInWithGoogle implements _SignInWithGoogle {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_SignInWithGoogle value) signInWithGoogle,
+    required TResult Function(_SignInWithGooglePreesed value)
+        signInWithGooglePressed,
   }) {
-    return signInWithGoogle(this);
+    return signInWithGooglePressed(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_SignInWithGoogle value)? signInWithGoogle,
+    TResult Function(_SignInWithGooglePreesed value)? signInWithGooglePressed,
     required TResult orElse(),
   }) {
-    if (signInWithGoogle != null) {
-      return signInWithGoogle(this);
+    if (signInWithGooglePressed != null) {
+      return signInWithGooglePressed(this);
     }
     return orElse();
   }
 }
 
-abstract class _SignInWithGoogle implements SignInFormEvent {
-  const factory _SignInWithGoogle() = _$_SignInWithGoogle;
+abstract class _SignInWithGooglePreesed implements SignInFormEvent {
+  const factory _SignInWithGooglePreesed() = _$_SignInWithGooglePreesed;
 }
 
 /// @nodoc
 class _$SignInFormStateTearOff {
   const _$SignInFormStateTearOff();
 
-  _SignInFormState call({required bool isSubmitted}) {
+  _SignInFormState call(
+      {required bool isSubmitting,
+      required Either<AuthFailure, Map<String, String?>>?
+          authFailureOrSuccess}) {
     return _SignInFormState(
-      isSubmitted: isSubmitted,
+      isSubmitting: isSubmitting,
+      authFailureOrSuccess: authFailureOrSuccess,
     );
   }
 }
@@ -260,7 +268,9 @@ const $SignInFormState = _$SignInFormStateTearOff();
 
 /// @nodoc
 mixin _$SignInFormState {
-  bool get isSubmitted => throw _privateConstructorUsedError;
+  bool get isSubmitting => throw _privateConstructorUsedError;
+  Either<AuthFailure, Map<String, String?>>? get authFailureOrSuccess =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SignInFormStateCopyWith<SignInFormState> get copyWith =>
@@ -272,7 +282,9 @@ abstract class $SignInFormStateCopyWith<$Res> {
   factory $SignInFormStateCopyWith(
           SignInFormState value, $Res Function(SignInFormState) then) =
       _$SignInFormStateCopyWithImpl<$Res>;
-  $Res call({bool isSubmitted});
+  $Res call(
+      {bool isSubmitting,
+      Either<AuthFailure, Map<String, String?>>? authFailureOrSuccess});
 }
 
 /// @nodoc
@@ -286,13 +298,18 @@ class _$SignInFormStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? isSubmitted = freezed,
+    Object? isSubmitting = freezed,
+    Object? authFailureOrSuccess = freezed,
   }) {
     return _then(_value.copyWith(
-      isSubmitted: isSubmitted == freezed
-          ? _value.isSubmitted
-          : isSubmitted // ignore: cast_nullable_to_non_nullable
+      isSubmitting: isSubmitting == freezed
+          ? _value.isSubmitting
+          : isSubmitting // ignore: cast_nullable_to_non_nullable
               as bool,
+      authFailureOrSuccess: authFailureOrSuccess == freezed
+          ? _value.authFailureOrSuccess
+          : authFailureOrSuccess // ignore: cast_nullable_to_non_nullable
+              as Either<AuthFailure, Map<String, String?>>?,
     ));
   }
 }
@@ -304,7 +321,9 @@ abstract class _$SignInFormStateCopyWith<$Res>
           _SignInFormState value, $Res Function(_SignInFormState) then) =
       __$SignInFormStateCopyWithImpl<$Res>;
   @override
-  $Res call({bool isSubmitted});
+  $Res call(
+      {bool isSubmitting,
+      Either<AuthFailure, Map<String, String?>>? authFailureOrSuccess});
 }
 
 /// @nodoc
@@ -320,13 +339,18 @@ class __$SignInFormStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? isSubmitted = freezed,
+    Object? isSubmitting = freezed,
+    Object? authFailureOrSuccess = freezed,
   }) {
     return _then(_SignInFormState(
-      isSubmitted: isSubmitted == freezed
-          ? _value.isSubmitted
-          : isSubmitted // ignore: cast_nullable_to_non_nullable
+      isSubmitting: isSubmitting == freezed
+          ? _value.isSubmitting
+          : isSubmitting // ignore: cast_nullable_to_non_nullable
               as bool,
+      authFailureOrSuccess: authFailureOrSuccess == freezed
+          ? _value.authFailureOrSuccess
+          : authFailureOrSuccess // ignore: cast_nullable_to_non_nullable
+              as Either<AuthFailure, Map<String, String?>>?,
     ));
   }
 }
@@ -334,28 +358,36 @@ class __$SignInFormStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_SignInFormState implements _SignInFormState {
-  _$_SignInFormState({required this.isSubmitted});
+  _$_SignInFormState(
+      {required this.isSubmitting, required this.authFailureOrSuccess});
 
   @override
-  final bool isSubmitted;
+  final bool isSubmitting;
+  @override
+  final Either<AuthFailure, Map<String, String?>>? authFailureOrSuccess;
 
   @override
   String toString() {
-    return 'SignInFormState(isSubmitted: $isSubmitted)';
+    return 'SignInFormState(isSubmitting: $isSubmitting, authFailureOrSuccess: $authFailureOrSuccess)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _SignInFormState &&
-            (identical(other.isSubmitted, isSubmitted) ||
+            (identical(other.isSubmitting, isSubmitting) ||
                 const DeepCollectionEquality()
-                    .equals(other.isSubmitted, isSubmitted)));
+                    .equals(other.isSubmitting, isSubmitting)) &&
+            (identical(other.authFailureOrSuccess, authFailureOrSuccess) ||
+                const DeepCollectionEquality()
+                    .equals(other.authFailureOrSuccess, authFailureOrSuccess)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(isSubmitted);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(isSubmitting) ^
+      const DeepCollectionEquality().hash(authFailureOrSuccess);
 
   @JsonKey(ignore: true)
   @override
@@ -364,10 +396,16 @@ class _$_SignInFormState implements _SignInFormState {
 }
 
 abstract class _SignInFormState implements SignInFormState {
-  factory _SignInFormState({required bool isSubmitted}) = _$_SignInFormState;
+  factory _SignInFormState(
+      {required bool isSubmitting,
+      required Either<AuthFailure, Map<String, String?>>?
+          authFailureOrSuccess}) = _$_SignInFormState;
 
   @override
-  bool get isSubmitted => throw _privateConstructorUsedError;
+  bool get isSubmitting => throw _privateConstructorUsedError;
+  @override
+  Either<AuthFailure, Map<String, String?>>? get authFailureOrSuccess =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SignInFormStateCopyWith<_SignInFormState> get copyWith =>
