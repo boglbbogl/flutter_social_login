@@ -254,8 +254,7 @@ class _$SignInFormStateTearOff {
 
   _SignInFormState call(
       {required bool isSubmitting,
-      required Either<AuthFailure, Map<String, String?>>?
-          authFailureOrSuccess}) {
+      required Either<AuthFailure, Unit>? authFailureOrSuccess}) {
     return _SignInFormState(
       isSubmitting: isSubmitting,
       authFailureOrSuccess: authFailureOrSuccess,
@@ -269,7 +268,7 @@ const $SignInFormState = _$SignInFormStateTearOff();
 /// @nodoc
 mixin _$SignInFormState {
   bool get isSubmitting => throw _privateConstructorUsedError;
-  Either<AuthFailure, Map<String, String?>>? get authFailureOrSuccess =>
+  Either<AuthFailure, Unit>? get authFailureOrSuccess =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -283,8 +282,7 @@ abstract class $SignInFormStateCopyWith<$Res> {
           SignInFormState value, $Res Function(SignInFormState) then) =
       _$SignInFormStateCopyWithImpl<$Res>;
   $Res call(
-      {bool isSubmitting,
-      Either<AuthFailure, Map<String, String?>>? authFailureOrSuccess});
+      {bool isSubmitting, Either<AuthFailure, Unit>? authFailureOrSuccess});
 }
 
 /// @nodoc
@@ -309,7 +307,7 @@ class _$SignInFormStateCopyWithImpl<$Res>
       authFailureOrSuccess: authFailureOrSuccess == freezed
           ? _value.authFailureOrSuccess
           : authFailureOrSuccess // ignore: cast_nullable_to_non_nullable
-              as Either<AuthFailure, Map<String, String?>>?,
+              as Either<AuthFailure, Unit>?,
     ));
   }
 }
@@ -322,8 +320,7 @@ abstract class _$SignInFormStateCopyWith<$Res>
       __$SignInFormStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {bool isSubmitting,
-      Either<AuthFailure, Map<String, String?>>? authFailureOrSuccess});
+      {bool isSubmitting, Either<AuthFailure, Unit>? authFailureOrSuccess});
 }
 
 /// @nodoc
@@ -350,7 +347,7 @@ class __$SignInFormStateCopyWithImpl<$Res>
       authFailureOrSuccess: authFailureOrSuccess == freezed
           ? _value.authFailureOrSuccess
           : authFailureOrSuccess // ignore: cast_nullable_to_non_nullable
-              as Either<AuthFailure, Map<String, String?>>?,
+              as Either<AuthFailure, Unit>?,
     ));
   }
 }
@@ -364,7 +361,7 @@ class _$_SignInFormState implements _SignInFormState {
   @override
   final bool isSubmitting;
   @override
-  final Either<AuthFailure, Map<String, String?>>? authFailureOrSuccess;
+  final Either<AuthFailure, Unit>? authFailureOrSuccess;
 
   @override
   String toString() {
@@ -397,14 +394,14 @@ class _$_SignInFormState implements _SignInFormState {
 
 abstract class _SignInFormState implements SignInFormState {
   factory _SignInFormState(
-      {required bool isSubmitting,
-      required Either<AuthFailure, Map<String, String?>>?
-          authFailureOrSuccess}) = _$_SignInFormState;
+          {required bool isSubmitting,
+          required Either<AuthFailure, Unit>? authFailureOrSuccess}) =
+      _$_SignInFormState;
 
   @override
   bool get isSubmitting => throw _privateConstructorUsedError;
   @override
-  Either<AuthFailure, Map<String, String?>>? get authFailureOrSuccess =>
+  Either<AuthFailure, Unit>? get authFailureOrSuccess =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

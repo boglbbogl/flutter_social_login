@@ -16,7 +16,7 @@ class AuthFacade implements IAuthFacade {
     this._firebaseAuth,
   );
   @override
-  Future<Either<AuthFailure, Map<String, String?>>> signInWithGoogle() async {
+  Future<Either<AuthFailure, Unit>> signInWithGoogle() async {
     try {
       final user = await _googleSignIn.signIn();
       if (user == null) {
@@ -32,10 +32,7 @@ class AuthFacade implements IAuthFacade {
       final url = user.photoUrl;
       return _firebaseAuth
           .signInWithCredential(authCredential)
-          .then((r) => right({
-                'firstName': firstName,
-                'photoUrl': url,
-              }));
+          .then((r) => right(unit));
     } on PlatformException catch (e) {
       print('error : $e');
       return left(const AuthFailure.serverError());

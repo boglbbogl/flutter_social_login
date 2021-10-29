@@ -4,7 +4,7 @@ part of 'sign_in_form_bloc.dart';
 class SignInFormState with _$SignInFormState {
   factory SignInFormState({
     required bool isSubmitting,
-    required Either<AuthFailure, Map<String, String?>>? authFailureOrSuccess,
+    required Either<AuthFailure, Unit>? authFailureOrSuccess,
   }) = _SignInFormState;
   factory SignInFormState.initial() => SignInFormState(
         isSubmitting: false,
