@@ -4,5 +4,6 @@ part 'auth_failure.freezed.dart';
 
 @freezed
 class AuthFailure with _$AuthFailure {
-  const factory AuthFailure.serverError() = ServerError;
+  const factory AuthFailure.cancelledByUser() = _CancelledByUser;
+  const factory AuthFailure.serverError() = _ServerError;
 }
