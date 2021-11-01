@@ -1,8 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_social_login/domain/auth_failure.dart';
+import 'package:flutter_social_login/domain/auth/auth_failure.dart';
+import 'package:flutter_social_login/domain/auth/i_auth_facade.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flutter_social_login/domain/i_auth_facade.dart';
+import 'package:flutter_social_login/domain/auth/user.dart';
+import 'package:flutter_social_login/infrasture/firebase_user_mapper.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
 
@@ -27,9 +29,6 @@ class AuthFacade implements IAuthFacade {
         idToken: authentication.idToken,
         accessToken: authentication.accessToken,
       );
-
-      final firstName = user.displayName;
-      final url = user.photoUrl;
       return _firebaseAuth
           .signInWithCredential(authCredential)
           .then((r) => right(unit));
@@ -37,5 +36,16 @@ class AuthFacade implements IAuthFacade {
       print('error : $e');
       return left(const AuthFailure.serverError());
     }
+  }
+
+  @override
+  Future<void> signOut() =>
+      Future.wait([_firebaseAuth.signOut(), _googleSignIn.signOut()]);
+
+  @override
+  Future<AppUser?> getSignInUser() async {
+    print(_firebaseAuth.currentUser);
+    if (_firebaseAuth.currentUser == null) return null;
+    return _firebaseAuth.currentUser!.toDomain();
   }
 }

@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flutter_social_login/domain/auth_failure.dart';
-import 'package:flutter_social_login/domain/i_auth_facade.dart';
+import 'package:flutter_social_login/domain/auth/auth_failure.dart';
+import 'package:flutter_social_login/domain/auth/i_auth_facade.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
