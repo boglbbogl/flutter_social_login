@@ -10,19 +10,25 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocListener<AuthBloc, AuthState>(
       listener: (context, state) {
+        print(state);
         state.map(
           initial: (_) {},
-          authenticated: (e) async {
+          authenticated: (_) async {
+            print('au');
             Application.router?.navigateTo(context, '/main');
+
             //router
           },
-          unAuthenticated: (e) async {
+          unAuthenticated: (_) async {
+            print('un');
+
+            print(state);
             Application.router?.navigateTo(context, '/signIn');
           },
         );
       },
       child: Scaffold(
-        body: Center(child: Text('login')),
+        body: Center(child: Text('Splash')),
       ),
     );
   }

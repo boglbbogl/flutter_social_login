@@ -9,31 +9,40 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return Scaffold(
-      bottomNavigationBar: InkWell(
-        onTap: () {
-          context.read<AuthBloc>().add(const AuthEvent.signedOut());
-        },
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-          child: Container(
-            height: size.height * 0.08,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(18), color: Colors.black),
-            child: Center(
-              child: Text(
-                'Log Out !!',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18),
+    return BlocListener<AuthBloc, AuthState>(
+      listener: (context, state) {
+        state.map(
+          initial: (e) async {},
+          authenticated: (e) async {},
+          unAuthenticated: (e) async {},
+        );
+      },
+      child: Scaffold(
+        bottomNavigationBar: InkWell(
+          onTap: () {
+            context.read<AuthBloc>().add(const AuthEvent.signedOut());
+          },
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+            child: Container(
+              height: size.height * 0.08,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(18), color: Colors.black),
+              child: Center(
+                child: Text(
+                  'Log Out !!',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18),
+                ),
               ),
             ),
           ),
         ),
-      ),
-      body: Center(
-        child: const Text('Login Sucess'),
+        body: Center(
+          child: const Text('Login Sucess'),
+        ),
       ),
     );
   }
