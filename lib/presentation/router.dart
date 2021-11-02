@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_social_login/presentation/main_page.dart';
 import 'package:flutter_social_login/presentation/sign_in_page.dart';
 import 'package:flutter_social_login/presentation/splash_page.dart';
+import 'package:injectable/injectable.dart';
 
 Handler splashRouteHandler = Handler(handlerFunc: (
   BuildContext? context,
@@ -25,6 +26,7 @@ Handler mainRouteHandler = Handler(handlerFunc: (
 
 class Routes {
   static String signIn = "/signIn";
+  static String main = "/main";
 
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(handlerFunc: (

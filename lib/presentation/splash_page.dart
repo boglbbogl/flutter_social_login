@@ -1,3 +1,4 @@
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_social_login/application/auth/auth_bloc.dart';
@@ -8,28 +9,35 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocListener<AuthBloc, AuthState>(
+    return BlocConsumer<AuthBloc, AuthState>(
       listener: (context, state) {
-        print(state);
         state.map(
-          initial: (_) {},
-          authenticated: (_) async {
-            print('au');
-            Application.router?.navigateTo(context, '/main');
-
-            //router
+          initial: (_) {
+            Application.router?.navigateTo(context, '/');
+          },
+          authenticated: (e) async {
+            print(e);
+            print('로그인');
+            Application.router?.navigateTo(context, '/main',
+                transition: TransitionType.fadeIn);
+            // Navigator.of(context).pop();
           },
           unAuthenticated: (_) async {
-            print('un');
+            print('로그아웃');
 
-            print(state);
-            Application.router?.navigateTo(context, '/signIn');
+            Application.router?.navigateTo(context, '/signIn',
+                transition: TransitionType.fadeIn);
           },
         );
       },
-      child: Scaffold(
-        body: Center(child: Text('Splash')),
-      ),
+      builder: (context, state) {
+        if (state == AuthState.initial()) {
+          // context.read<AuthBloc>().add(const AuthEvent.authCheckRequested());
+        }
+        return Scaffold(
+          body: Center(child: Text('Splash')),
+        );
+      },
     );
   }
 }
